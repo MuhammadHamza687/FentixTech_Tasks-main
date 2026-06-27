@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FentixTech Tasks Hub</title>
+    <!-- Google Fonts & FontAwesome Icons -->
+    <link href="https://googleapis.com" rel="stylesheet">
+    <link rel="stylesheet" href="https://cloudflare.com">
+    <style>
+        :root {
+            --bg-gradient: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #020617 100%);
+            --card-bg: rgba(255, 255, 255, 0.03);
+            --card-border: rgba(255, 255, 255, 0.08);
+            --text-primary: #f8fafc;
+            --text-secondary: #94a3b8;
+            --accent-glow: #6366f1;
+            --accent-cyan: #06b6d4;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        body {
+            background: var(--bg-gradient);
+            color: var(--text-primary);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 4rem 2rem;
+            overflow-x: hidden;
+        }
+
+        /* Subtle background decorative shapes */
+        body::before, body::after {
+            content: '';
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background: rgba(99, 102, 241, 0.15);
+            filter: blur(80px);
+            z-index: -1;
+        }
+        body::before { top: 10%; left: 15%; background: rgba(99, 102, 241, 0.15); }
+        body::after { bottom: 15%; right: 15%; background: rgba(6, 182, 212, 0.15); }
+
+        header {
+            text-align: center;
+            margin-bottom: 4rem;
+            max-width: 600px;
+        }
+
+        header h1 {
+            font-size: 2.75rem;
+            font-weight: 700;
+            letter-spacing: -0.05em;
+            margin-bottom: 0.75rem;
+            background: linear-gradient(to right, #ffffff, #94a3b8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        header p {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            width: 100%;
+            max-width: 1100px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 20px;
+            padding: 2rem;
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            text-decoration: none;
+            color: inherit;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.1) 0%, transparent 100%);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-6px);
+            border-color: rgba(99, 102, 241, 0.3);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3), 0 0 30px rgba(99, 102, 241, 0.1);
+        }
+
+        .card:hover::before {
+            opacity: 1;
+        }
+
+        .card-top {
+            position: relative;
+            z-index: 1;
+        }
+
+        .icon-box {
+            width: 48px;
+            height: 48px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+            color: var(--accent-cyan);
+            margin-bottom: 1.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .card:hover .icon-box {
+            background: rgba(99, 102, 241, 0.2);
+            color: #fff;
+            transform: scale(1.05);
+        }
+
+        .card h2 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.02em;
+        }
+
+        .card p {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            line-height: 1.5;
+            margin-bottom: 2rem;
+        }
+
+        .card-footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+            z-index: 1;
+        }
+
+        .badge {
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            padding: 0.35rem 0.75rem;
+            border-radius: 100px;
+            background: rgba(255, 255, 255, 0.05);
+            color: var(--text-secondary);
+        }
+
+        .card:hover .badge {
+            background: rgba(6, 182, 212, 0.15);
+            color: var(--accent-cyan);
+        }
+
+        .arrow {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            transform: translateX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover .arrow {
+            color: #fff;
+            transform: translateX(4px);
+        }
+
+        footer {
+            margin-top: auto;
+            padding-top: 5rem;
+            color: rgba(255, 255, 255, 0.25);
+            font-size: 0.85rem;
+            letter-spacing: 0.02em;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>FentixTech Core Tasks</h1>
+        <p>A beautifully curated collection of assignments and web interfaces engineered for the FentixTech Internship roadmap.</p>
+    </header>
+
+    <div class="grid">
+        <!-- Task 01 -->
+        <a href="./Task01/Task01_FentixTech.html" class="card">
+            <div class="card-top">
+                <div class="icon-box"><i class="fa-solid fa-layer-group"></i></div>
+                <h2>Task 01</h2>
+                <p>Initial FentixTech base framework evaluation layout assignment.</p>
+            </div>
+            <div class="card-footer">
+                <span class="badge">Structure</span>
+                <i class="fa-solid fa-arrow-right arrow"></i>
+            </div>
+        </a>
+
+        <!-- Task 02 -->
+        <a href="./Task02/index.html" class="card">
+            <div class="card-top">
+                <div class="icon-box"><i class="fa-solid fa-palette"></i></div>
+                <h2>Task 02</h2>
+                <p>Advanced structural styling templates showcasing system typography and layouts.</p>
+            </div>
+            <div class="card-footer">
+                <span class="badge">CSS Styling</span>
+                <i class="fa-solid fa-arrow-right arrow"></i>
+            </div>
+        </a>
+
+        <!-- Task 03 -->
+        <a href="./Task03-Clone-site/index.html" class="card">
+            <div class="card-top">
+                <div class="icon-box"><i class="fa-solid fa-copy"></i></div>
+                <h2>Task 03</h2>
+                <p>Pixel-perfect desktop mirror replica clone modeled from live web assets.</p>
+            </div>
+            <div class="card-footer">
+                <span class="badge">Site Clone</span>
+                <i class="fa-solid fa-arrow-right arrow"></i>
+            </div>
+        </a>
+
+        <!-- Task 04 -->
+        <a href="./Task04-clone-insta/index.html" class="card">
+            <div class="card-top">
+                <div class="icon-box"><i class="fa-brands fa-instagram"></i></div>
+                <h2>Task 04</h2>
+                <p>Multi-view dashboard clone exploring feed interfaces, profile views, and exploration menus.</p>
+            </div>
+            <div class="card-footer">
+                <span class="badge">Instagram UI</span>
+                <i class="fa-solid fa-arrow-right arrow"></i>
+            </div>
+        </a>
+
+        <!-- Task 05 -->
+        <a href="./task05-responsive/index.html" class="card">
+            <div class="card-top">
+                <div class="icon-box"><i class="fa-solid fa-mobile-screen"></i></div>
+                <h2>Task 05</h2>
+                <p>Adaptive structural web design displaying fluid grid breakpoint transitions.</p>
+            </div>
+            <div class="card-footer">
+                <span class="badge">Responsive</span>
+                <i class="fa-solid fa-arrow-right arrow"></i>
+            </div>
+        </a>
+
+        <!-- Task 06 -->
+        <a href="./Task06-Startup2/index.html" class="card">
+            <div class="card-top">
+                <div class="icon-box"><i class="fa-solid fa-rocket"></i></div>
+                <h2>Task 06</h2>
+                <p>High-conversion landing system template customized for technology startups.</p>
+            </div>
+            <div class="card-footer">
+                <span class="badge">Startup Landing</span>
+                <i class="fa-solid fa-arrow-right arrow"></i>
+            </div>
+        </a>
+
+        <!-- Task 07 -->
+        <a href="./Task07-whitepace/index.html" class="card">
+            <div class="card-top">
+                <div class="icon-box"><i class="fa-solid fa-bezier-curve"></i></div>
+                <h2>Task 07</h2>
+                <p>Minimalist workspace environment blueprint emphasizing whitespace proportions.</p>
+            </div>
+            <div class="card-footer">
+                <span class="badge">Whitespace UI</span>
+                <i class="fa-solid fa-arrow-right arrow"></i>
+            </div>
+        </a>
+    </div>
+
+    <footer>
