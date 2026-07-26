@@ -19,3 +19,5 @@ For Vercel deployment:
 - Publish directory: `dist`
 
 Task 12 is a static React/Vite app, so it does not need a separate Node server.
+
+If Vercel is connected to the whole repository, the root `vercel.json` builds `Task12-WeatherApp` and serves its `dist` folder.

@@ -44,7 +44,9 @@ For Vercel:
 - Build command: `npm run build`
 - Publish directory: `dist`
 
-The included `vercel.json` keeps these settings in the project and rewrites all routes back to `index.html`.
+The included `vercel.json` keeps these settings in the project. This app does not use client-side routes, so no catch-all rewrite is needed.
+
+If you deploy the whole repository instead of selecting `Task12-WeatherApp` as the root, the repository-level `vercel.json` will build and publish this task automatically.
 
 ## Project Structure
 
