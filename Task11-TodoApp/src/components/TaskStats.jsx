@@ -1,0 +1,18 @@
+export default function TaskStats({ stats }) {
+  return (
+    <div className="stats-grid" aria-label="Task summary">
+      <article>
+        <span>Total</span>
+        <strong>{stats.total}</strong>
+      </article>
+      <article>
+        <span>Pending</span>
+        <strong>{stats.pending}</strong>
+      </article>
+      <article>
+        <span>Completed</span>
+        <strong>{stats.completed}</strong>
+      </article>
+    </div>
+  );
+}

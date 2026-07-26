@@ -4,6 +4,6 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "build": "npm install --prefix Task12-WeatherApp && npm run build --prefix Task12-WeatherApp && node scripts/build-vercel-site.js"
+    "build": "npm install --prefix Task11-TodoApp && npm run build --prefix Task11-TodoApp && npm install --prefix Task12-WeatherApp && npm run build --prefix Task12-WeatherApp && node scripts/build-vercel-site.js"
   }
 }
