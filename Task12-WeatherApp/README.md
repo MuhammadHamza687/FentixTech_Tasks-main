@@ -44,6 +44,8 @@ Recommended Vercel setup from the repository root:
 - Build command: `npm run build`
 - Publish directory: `dist`
 
+This keeps the main tasks hub at `/` and serves this weather app from `/Task12-WeatherApp/`.
+
 Alternative setup if you deploy this folder directly:
 
 - Root directory: `Task12-WeatherApp`

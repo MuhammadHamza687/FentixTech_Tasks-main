@@ -20,4 +20,4 @@ For Vercel deployment:
 
 Task 12 is a static React/Vite app, so it does not need a separate Node server.
 
-The root build script builds `Task12-WeatherApp` and copies the output into a root `dist` folder for Vercel.
+The root build script keeps the tasks hub at `/` and copies the React app to `/Task12-WeatherApp/`.
