@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Muhammad Hamza portfolio website featuring projects, skills, certifications, and contact details."
+    />
+    <title>Muhammad Hamza | Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Manrope:wght@400;500;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <canvas class="nn-bg" id="nnBg" aria-hidden="true"></canvas>
+    <div class="noise-layer" aria-hidden="true"></div>
+
+    <header class="sticky-top site-header">
+      <nav class="navbar navbar-expand-lg" aria-label="Main navigation">
+        <div class="container">
+          <a class="navbar-brand" href="#home">
+            <span class="dot"></span>
+            MH
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#mainNav"
+            aria-controls="mainNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="mainNav">
+            <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+              <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+              <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+              <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+              <li class="nav-item"><a class="nav-link" href="#certs">Certs</a></li>
+              <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+              <li class="nav-item ms-lg-2">
+                <a class="btn btn-hire" href="#contact">Hire Me</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section id="home" class="hero section-space">
+        <div class="container">
+          <div class="hero-grid">
+            <div class="hero-left reveal-up">
+              <p class="eyebrow">Available for hire • Pakistan</p>
+              <h1 class="display-title">
+                Muhammad<br />Hamza
+              </h1>
+              <p class="subtitle">
+                Data Analyst | 6th-semester software engineering student with CGPA 3.48. IBM-certified in Python and full-stack. I turn massive real-world datasets into clear, compelling insights and build tools people actually use.
+              </p>
+              <div class="hero-cta d-flex flex-wrap gap-3 mt-4">
+                <a href="#projects" class="btn btn-main">View Projects</a>
+                <a href="#contact" class="btn btn-outline-light btn-ghost">Get in Touch</a>
+              </div>
+              <p class="scroll-hint mt-4">Scroll to explore</p>
+            </div>
+
+            <div class="hero-right reveal-up" data-delay="120">
+              <div class="kpi-grid">
+                <article class="kpi-card">
+                  <h3 class="counter" data-target="3.48">0</h3>
+                  <p>CGPA / 4.0</p>
+                </article>
+                <article class="kpi-card">
+                  <h3 class="counter" data-target="400">0</h3>
+                  <p>k+ Rows Analysed</p>
+                </article>
+                <article class="kpi-card">
+                  <h3 class="counter" data-target="5">0</h3>
+                  <p>IBM Certifications</p>
+                </article>
+                <article class="kpi-card">
+                  <h3 class="counter" data-target="3">0</h3>
+                  <p>Live Projects</p>
+                </article>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="section-space">
+        <div class="container reveal-up">
+          <p class="section-label">Who I Am</p>
+          <h2 class="section-title">A Data Engineer Who Thinks in Systems</h2>
+          <p class="section-copy">
+            I am Muhammad Hamza, a 6th-semester software engineering student at COMSATS University Islamabad (Lahore Campus). My passion sits at the intersection of data, policy, and people. The best analysis does not just reveal what happened, it shows what should happen next.
+          </p>
+          <p class="section-copy">
+            From working with large public government datasets to modelling carbon emissions for Pakistani students, I bring end-to-end rigour to every dataset.
+          </p>
+
+          <div class="feature-grid mt-4">
+            <article class="feature-card">
+              <h3>End-to-End Pipelines</h3>
+              <p>Acquisition to cleaning, EDA, visualisation, and actionable insight.</p>
+            </article>
+            <article class="feature-card">
+              <h3>Creative Data Sourcing</h3>
+              <p>Gazette data, public aggregation, and official records beyond standard datasets.</p>
+            </article>
+            <article class="feature-card">
+              <h3>Live Impact</h3>
+              <p>Deployed web applications used by students every day.</p>
+            </article>
+            <article class="feature-card">
+              <h3>Entrepreneurial Mindset</h3>
+              <p>NIC Campus Ambassador connecting students to startup ecosystems.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="journey" class="section-space">
+        <div class="container reveal-up">
+          <p class="section-label">Journey</p>
+          <h2 class="section-title">Education & Experience</h2>
+          <div class="timeline">
+            <article class="timeline-item">
+              <span class="timeline-date">Sep 2023 - Present</span>
+              <h3>BS Software Engineering</h3>
+              <p>COMSATS University Islamabad, Lahore Campus</p>
+              <p class="muted">CGPA 3.48 / 4.0 | Databases (4.0), Data Science Fundamentals (4.0)</p>
+            </article>
+            <article class="timeline-item">
+              <span class="timeline-date">Mar 2025 - Present</span>
+              <h3>NIC Campus Ambassador</h3>
+              <p>National Incubation Center, Pakistan</p>
+              <p class="muted">Organising startup workshops and tech events at COMSATS Lahore.</p>
+            </article>
+            <article class="timeline-item">
+              <span class="timeline-date">Sep 2021 - Jun 2023</span>
+              <h3>FSc Pre-Engineering</h3>
+              <p>Punjab Group of Colleges</p>
+              <p class="muted">89% overall with strong mathematics and sciences foundation.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="section-space">
+        <div class="container reveal-up">
+          <p class="section-label">Selected Work</p>
+          <h2 class="section-title">Projects That Ship</h2>
+          <div class="row g-4 mt-1">
+            <div class="col-lg-4">
+              <article class="project-card h-100">
+                <p class="project-tag">Live App • Public Policy x Data Modelling</p>
+                <h3>Pakistan Fuel Consumption Model</h3>
+                <p>
+                  Modelled student commuter populations across major Pakistani cities using official gazette methodology, estimating petrol savings and carbon reduction from online and hybrid classes.
+                </p>
+                <ul class="tech-list">
+                  <li>Python</li>
+                  <li>Streamlit</li>
+                  <li>Pandas</li>
+                  <li>Data Modelling</li>
+                </ul>
+                <a
+                  href="https://pakistan-students-fuel-consumption.streamlit.app/"
+                  class="project-link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >View Live App</a
+                >
+              </article>
+            </div>
+            <div class="col-lg-4">
+              <article class="project-card h-100">
+                <p class="project-tag">Live App • Healthcare Analytics x ML</p>
+                <h3>US Hospitals 130 EDA</h3>
+                <p>
+                  Performed deep exploratory analysis on diabetic patient records from 130 hospitals, identifying readmission risk patterns and translating them into presentation-ready insights.
+                </p>
+                <ul class="tech-list">
+                  <li>Python</li>
+                  <li>Pandas</li>
+                  <li>Scikit-learn</li>
+                  <li>Seaborn</li>
+                </ul>
+                <a
+                  href="https://130ushopitalsdibeticdataanalysis.streamlit.app/"
+                  class="project-link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >View Live App</a
+                >
+              </article>
+            </div>
+            <div class="col-lg-4">
+              <article class="project-card h-100">
+                <p class="project-tag">Daily Users • Full-Stack Web x Analytics</p>
+                <h3>CUI Nexus Student Platform</h3>
+                <p>
+                  Built and deployed a student platform for timetables, past papers, and announcements, then improved the product using usage analytics and student behaviour trends.
+                </p>
+                <ul class="tech-list">
+                  <li>React</li>
+                  <li>Node.js</li>
+                  <li>Express</li>
+                  <li>TypeScript</li>
+                </ul>
+                <a
+                  href="http://cuinexus.vercel.app/"
+                  class="project-link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >View Live App</a
+                >
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="skills" class="section-space">
+        <div class="container reveal-up">
+          <p class="section-label">Technical Arsenal</p>
+          <h2 class="section-title">Skills & Stack</h2>
+          <div class="row g-4">
+            <div class="col-lg-6">
+              <div class="skill-block">
+                <h3>Data & Analysis</h3>
+                <div class="skill-item"><span>Python (Pandas, NumPy)</span><strong>92%</strong></div>
+                <div class="progress"><div style="width:92%"></div></div>
+                <div class="skill-item"><span>SQL (Joins, Aggregations)</span><strong>88%</strong></div>
+                <div class="progress"><div style="width:88%"></div></div>
+                <div class="skill-item"><span>EDA & Statistics</span><strong>85%</strong></div>
+                <div class="progress"><div style="width:85%"></div></div>
+                <div class="skill-item"><span>Data Cleaning</span><strong>90%</strong></div>
+                <div class="progress"><div style="width:90%"></div></div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="skill-block">
+                <h3>Visualisation & AI</h3>
+                <div class="skill-item"><span>Plotly (Interactive)</span><strong>88%</strong></div>
+                <div class="progress"><div style="width:88%"></div></div>
+                <div class="skill-item"><span>Matplotlib / Seaborn</span><strong>85%</strong></div>
+                <div class="progress"><div style="width:85%"></div></div>
+                <div class="skill-item"><span>Scikit-learn</span><strong>78%</strong></div>
+                <div class="progress"><div style="width:78%"></div></div>
+                <div class="skill-item"><span>Prompt Engineering</span><strong>88%</strong></div>
+                <div class="progress"><div style="width:88%"></div></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="stack-wrap mt-4">
+            <span>Python</span><span>Pandas</span><span>NumPy</span><span>Plotly</span><span>Streamlit</span><span>Scikit-learn</span><span>SQL</span><span>React</span><span>TypeScript</span><span>Node.js</span><span>Folium</span><span>MongoDB</span><span>Git</span><span>Figma</span><span>Excel</span><span>Jupyter</span>
+          </div>
+        </div>
+      </section>
+
+      <section id="certs" class="section-space">
+        <div class="container reveal-up">
+          <p class="section-label">Verified Learning</p>
+          <h2 class="section-title">Certifications & Credentials</h2>
+          <div class="row g-4">
+            <div class="col-md-6 col-xl-4"><article class="cert-card"><h3>IBM</h3><p>Python for Data Science, AI & Development</p><span>2024</span></article></div>
+            <div class="col-md-6 col-xl-4"><article class="cert-card"><h3>University of Michigan</h3><p>Programming for Everybody (Python)</p><span>2024</span></article></div>
+            <div class="col-md-6 col-xl-4"><article class="cert-card"><h3>IBM</h3><p>Developing Back-End Apps with Node.js & Express</p><span>2024</span></article></div>
+            <div class="col-md-6 col-xl-4"><article class="cert-card"><h3>IBM</h3><p>Developing Front-End Apps with React</p><span>2024</span></article></div>
+            <div class="col-md-6 col-xl-4"><article class="cert-card"><h3>Microsoft</h3><p>Fundamentals of UI/UX Design</p><span>2024</span></article></div>
+          </div>
+
+          <div class="coursework mt-4">
+            <p><strong>4.0</strong> Databases</p>
+            <p><strong>4.0</strong> Data Science Fundamentals</p>
+            <p><strong>3.66</strong> Data Structures & Algorithms</p>
+            <p><strong>3.33</strong> Object-Oriented Programming</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section-space contact-space">
+        <div class="container reveal-up">
+          <p class="section-label">Let's Build Together</p>
+          <h2 class="section-title">Open to Opportunities</h2>
+          <p class="section-copy">
+            Whether it is a data analysis project, an AI-powered tool, a research collaboration, or a full-time role, I would love to hear from you. Based in Pakistan and available globally.
+          </p>
+
+          <div class="contact-card">
+            <div>
+              <p class="mail" id="emailText">muhammadhamza9280@gmail.com</p>
+              <div class="d-flex flex-wrap gap-2">
+                <button id="copyBtn" class="btn btn-main" type="button">Copy Email</button>
+                <a
+                  class="btn btn-outline-light btn-ghost"
+                  href="https://mail.google.com/mail/?view=cm&fs=1&to=muhammadhamza9280@gmail.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Send Email</a
+                >
+              </div>
+            </div>
+            <div class="contact-meta">
+              <p><span>Location:</span> Pakistan</p>
+              <p><span>Timezone:</span> PKT (UTC+5)</p>
+              <p><span>Open To:</span> Remote / Hybrid</p>
+              <p><span>Response:</span> under 24 hours</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="py-4 text-center">
+      <div class="container">
+        <p class="mb-0">© 2025 Muhammad Hamza</p>
+      </div>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js"></script>
+  </body>
+</html>
