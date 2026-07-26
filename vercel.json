@@ -1,5 +1,5 @@
 {
-  "installCommand": "npm install --prefix Task12-WeatherApp",
-  "buildCommand": "npm run build --prefix Task12-WeatherApp",
-  "outputDirectory": "Task12-WeatherApp/dist"
+  "installCommand": "npm install",
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist"
 }

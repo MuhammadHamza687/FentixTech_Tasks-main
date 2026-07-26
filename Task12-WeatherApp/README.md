@@ -38,7 +38,13 @@ npm run preview
 
 This project is a static React/Vite app. It does not need a separate Node.js server, Express server, or Next.js conversion for Vercel.
 
-For Vercel:
+Recommended Vercel setup from the repository root:
+
+- Root directory: repository root
+- Build command: `npm run build`
+- Publish directory: `dist`
+
+Alternative setup if you deploy this folder directly:
 
 - Root directory: `Task12-WeatherApp`
 - Build command: `npm run build`

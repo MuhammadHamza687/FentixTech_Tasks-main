@@ -1,0 +1,9 @@
+{
+  "name": "fentixtech-tasks",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "build": "npm install --prefix Task12-WeatherApp && npm run build --prefix Task12-WeatherApp && node scripts/copy-task12-dist.js"
+  }
+}

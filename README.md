@@ -14,10 +14,10 @@ The app uses Open-Meteo for geocoding and live weather data, so no API key is re
 
 For Vercel deployment:
 
-- Root directory: `Task12-WeatherApp`
+- Root directory: repository root
 - Build command: `npm run build`
 - Publish directory: `dist`
 
 Task 12 is a static React/Vite app, so it does not need a separate Node server.
 
-If Vercel is connected to the whole repository, the root `vercel.json` builds `Task12-WeatherApp` and serves its `dist` folder.
+The root build script builds `Task12-WeatherApp` and copies the output into a root `dist` folder for Vercel.
