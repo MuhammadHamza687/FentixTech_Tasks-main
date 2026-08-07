@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cart - Furnitur</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Navbar (copied from index) -->
+  <header class="header">
+    <div class="container navbar">
+      <a href="index.html" class="logo">
+        <span class="logo-title">FURNITUR</span>
+        <span class="logo-subtitle">YOUR FUTURE INTERIOR</span>
+      </a>
+      <div class="search-container">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" placeholder="Search something">
+      </div>
+      <nav class="nav-links">
+        <a href="index.html">HOME</a>
+        <a href="#">SHOP <i class="fa-solid fa-angle-down"></i></a>
+        <a href="#">BLOG</a>
+        <a href="#">ABOUT US</a>
+      </nav>
+      <div class="user-actions">
+        <a href="login.html" class="action-btn"><i class="fa-regular fa-heart"></i> LOGIN</a>
+        <a href="cart.html" class="action-btn"><i class="fa-solid fa-cart-shopping"></i> CART</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="container" style="padding:80px 20px;">
+      <h2 class="section-title">YOUR CART</h2>
+      <p class="section-subtitle">REVIEW ITEMS IN YOUR CART</p>
+
+      <div id="cartRoot" style="margin-top:30px;">
+        <div id="cartItemsArea"></div>
+
+        <div id="cartSummary" style="margin-top:30px; display:flex; justify-content:space-between; align-items:center; gap:20px; flex-wrap:wrap;">
+          <div id="cartTotals" style="font-weight:700;"></div>
+          <div>
+            <a href="index.html" class="btn-dark" style="margin-right:10px; padding:10px 16px; display:inline-block;">CONTINUE SHOPPING</a>
+            <a id="proceedToCheckout" class="btn-dark" style="padding:10px 16px; display:inline-block; cursor:pointer;">PROCEED TO CHECKOUT</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer (copied from index) -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-col">
+        <h3>CUSTOMER SERVICE</h3>
+        <ul>
+          <li><a href="#">Help & FAQs</a></li>
+          <li><a href="#">Return & Refund</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>COMPANY</h3>
+        <ul>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>HELP CENTER</h3>
+        <ul>
+          <li><a href="#">Order Information</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>RETURN & WARRANTY</h3>
+        <ul>
+          <li><a href="#">Returns & Exchange Policy</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>Furnitur © Copyright 2020, Inc. All rights reserved</p>
+      <div class="socials">
+        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

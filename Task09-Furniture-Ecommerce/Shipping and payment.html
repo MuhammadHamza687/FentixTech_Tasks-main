@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Shipping and payment - Furnitur</title>
+  <link href="css/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>main{padding:80px 20px;}</style>
+</head>
+<body>
+  <header class="header"><div class="container navbar"><a href="index.html" class="logo"><span class="logo-title">FURNITUR</span></a></div></header>
+  <main class="container">
+    <h2 class="section-title">Shipping & Payment</h2>
+    <p class="section-subtitle">Choose shipping and enter payment info</p>
+    <form id="shippingForm" style="max-width:700px;margin:24px 0;">
+      <div style="margin-bottom:12px;">
+        <label>Shipping method</label>
+        <select name="method" style="width:100%;padding:10px;border:1px solid var(--border);margin-top:6px;">
+          <option value="standard">Standard - $25.00</option>
+          <option value="express">Express - $45.00</option>
+        </select>
+      </div>
+      <div style="margin-bottom:12px;display:flex;gap:12px;"><input name="cardname" placeholder="Name on card" required style="flex:1;padding:10px;border:1px solid var(--border)"><input name="cardnumber" placeholder="Card number" required style="width:240px;padding:10px;border:1px solid var(--border)"></div>
+      <div style="display:flex;gap:12px;margin-bottom:12px;"><input name="exp" placeholder="MM/YY" style="width:120px;padding:10px;border:1px solid var(--border)"><input name="cvc" placeholder="CVC" style="width:120px;padding:10px;border:1px solid var(--border)"></div>
+      <div style="display:flex;gap:10px;"><button type="submit" class="btn-dark">Continue to Review</button><a href="Customer%20Information.html" style="align-self:center;margin-left:10px;color:var(--primary)">Back</a></div>
+    </form>
+  </main>
+  <script src="js/checkout.js"></script>
+</body>
+</html>
