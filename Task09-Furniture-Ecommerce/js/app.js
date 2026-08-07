@@ -57,6 +57,7 @@ const cartSidebar = document.getElementById("cartSidebar");
 const closeCartBtn = document.getElementById("closeCartBtn");
 const cartItemsContainer = document.getElementById("cartItemsContainer");
 const cartSubtotal = document.getElementById("cartSubtotal");
+const checkoutBtn = document.querySelector(".checkout-btn");
 const toast = document.getElementById("toast");
 
 /* ── State ── */
@@ -83,6 +84,11 @@ function init() {
   });
   closeCartBtn.addEventListener("click", () => toggleCart(false));
   cartOverlay.addEventListener("click", () => toggleCart(false));
+  if (checkoutBtn) {
+    checkoutBtn.addEventListener("click", () => {
+      window.location.href = "cart.html";
+    });
+  }
 }
 
 /* ── Render Category Filters ── */

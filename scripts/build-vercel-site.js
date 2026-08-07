@@ -15,7 +15,8 @@ const staticTaskFolders = [
   "Task06-Startup2",
   "Task07-whitepace",
   "Task08-StudentRegistration",
-  "Task09-Furniture-Ecommerce"
+  "Task09-Furniture-Ecommerce",
+  "Task10-Portfolio"
 ];
 
 if (!existsSync(task11Build)) {
@@ -38,4 +39,4 @@ for (const folder of staticTaskFolders) {
 cpSync(task11Build, resolve(output, "Task11-TodoApp"), { recursive: true });
 cpSync(task12Build, resolve(output, "Task12-WeatherApp"), { recursive: true });
 
-console.log("Built Vercel output: hub at /, Task 11 at /Task11-TodoApp/, and Task 12 at /Task12-WeatherApp/.");
+console.log("Built Vercel output: hub at /, Task 10 at /Task10-Portfolio/, Task 11 at /Task11-TodoApp/, and Task 12 at /Task12-WeatherApp/.");
