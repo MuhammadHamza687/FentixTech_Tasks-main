@@ -86,6 +86,7 @@ export default function App() {
           )}
 
           {error && <StatusMessage type="error" message={error} />}
+          {weather?.notice && <StatusMessage type="notice" message={weather.notice} />}
         </div>
 
         {weather && <WeatherDisplay weather={weather} />}

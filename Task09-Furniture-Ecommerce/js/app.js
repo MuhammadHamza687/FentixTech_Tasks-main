@@ -12,7 +12,7 @@ const products = [
     name: "MODERN BLACK HANGING LIGHT",
     price: 1595.60,
     category: "HANGING LIGHT",
-    image: "https://images.unsplash.com/photo-1513506003901-1e6a229e9d15?q=80&w=400&auto=format&fit=crop"
+    image: "https://images.unsplash.com/photo-1540932239986-30128078f3c5?q=80&w=400&auto=format&fit=crop"
   },
   {
     id: 3,

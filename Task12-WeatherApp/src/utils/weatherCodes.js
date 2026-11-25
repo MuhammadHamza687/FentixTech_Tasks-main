@@ -1,4 +1,33 @@
-const weatherCodeMap = {
+export function getWeatherDetails(code, isDay) {
+  const numericCode = Number(code);
+  let details;
+
+  if (numericCode >= 200 && numericCode < 300) {
+    details = { icon: "cloudLightning", tone: "storm" };
+  } else if (numericCode >= 300 && numericCode < 400) {
+    details = { icon: "cloudDrizzle", tone: "rainy" };
+  } else if (numericCode >= 500 && numericCode < 600) {
+    details = { icon: "cloudRain", tone: "rainy" };
+  } else if (numericCode >= 600 && numericCode < 700) {
+    details = { icon: "cloudSnow", tone: "snowy" };
+  } else if (numericCode >= 700 && numericCode < 800) {
+    details = { icon: "cloudFog", tone: "mist" };
+  } else if (numericCode === 800) {
+    details = isDay
+      ? { icon: "sun", tone: "sunny" }
+      : { icon: "moon", tone: "night" };
+  } else if (numericCode === 801) {
+    details = isDay
+      ? { icon: "cloudSun", tone: "sunny" }
+      : { icon: "cloudMoon", tone: "night" };
+  } else {
+    details = { icon: "cloud", tone: "cloudy" };
+  }
+
+  return details;
+}
+
+const openMeteoCodeMap = {
   0: { label: "Clear sky", icon: "sun", tone: "sunny" },
   1: { label: "Mainly clear", icon: "cloudSun", tone: "sunny" },
   2: { label: "Partly cloudy", icon: "cloudSun", tone: "cloudy" },
@@ -29,9 +58,9 @@ const weatherCodeMap = {
   99: { label: "Thunderstorm with heavy hail", icon: "cloudLightning", tone: "storm" }
 };
 
-export function getWeatherDetails(code, isDay) {
+export function getOpenMeteoDetails(code, isDay) {
   const numericCode = Number(code);
-  const details = weatherCodeMap[numericCode] || {
+  const details = openMeteoCodeMap[numericCode] || {
     label: "Mixed conditions",
     icon: "cloudSun",
     tone: "cloudy"
