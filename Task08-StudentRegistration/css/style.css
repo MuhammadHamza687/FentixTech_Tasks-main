@@ -178,7 +178,13 @@ body {
 
 .table-responsive {
     max-height: 600px;
+    overflow-x: auto;
     overflow-y: auto;
+    overscroll-behavior-x: contain;
+}
+
+#studentsTable {
+    min-width: 700px;
 }
 
 /* Empty Message */

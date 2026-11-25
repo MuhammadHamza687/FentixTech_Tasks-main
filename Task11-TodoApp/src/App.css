@@ -40,12 +40,15 @@ button {
   min-height: 100vh;
   padding: clamp(1rem, 4vw, 3rem);
   display: grid;
+  grid-template-columns: minmax(0, 1fr);
   place-items: center;
 }
 
 .todo-app {
   width: min(100%, 920px);
+  min-width: 0;
   display: grid;
+  grid-template-columns: minmax(0, 1fr);
   gap: 1rem;
 }
 
@@ -224,6 +227,8 @@ h1 {
 
 .task-list {
   display: grid;
+  min-width: 0;
+  grid-template-columns: minmax(0, 1fr);
   gap: 0.75rem;
   padding: 0;
   margin: 0;
@@ -317,6 +322,7 @@ h1 {
 
 .edit-form input {
   flex: 1;
+  min-width: 0;
 }
 
 .empty-state {
@@ -364,7 +370,8 @@ h1 {
 
   .task-form,
   .task-item {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
+    min-width: 0;
   }
 
   .task-form button,

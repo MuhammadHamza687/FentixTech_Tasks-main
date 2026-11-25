@@ -468,6 +468,25 @@ ul {
     .footer-bottom-row .text-right {
         text-align: center;
     }
+
+    .tm-hero {
+        height: 340px;
+        background-attachment: scroll;
+        padding: 20px 15px;
+    }
+
+    .effect-ming figcaption {
+        opacity: 1;
+    }
+
+    .effect-ming img {
+        opacity: 0.62;
+    }
+
+    .effect-ming h2,
+    .effect-ming a {
+        transform: translateY(0);
+    }
 }
 
 @media (max-width: 575px) {
